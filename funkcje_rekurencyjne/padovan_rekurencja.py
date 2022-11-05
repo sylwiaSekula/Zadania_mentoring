@@ -8,9 +8,9 @@ def pad(n):
 
 
 def main():
+    n = 20
     print(pad(n))
 
 
 if __name__ == '__main__':
-    n = 20
     main()

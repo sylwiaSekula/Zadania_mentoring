@@ -10,9 +10,9 @@ def padov(n):
 
 
 def main():
+    n = 200
     print(padov(n))
 
 
 if __name__ == '__main__':
-    n = 200
     main()
