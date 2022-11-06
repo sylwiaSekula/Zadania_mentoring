@@ -20,13 +20,13 @@ def integral_approximation(f, a, b):
 
 
 def main():
+    lamb = 1.5
+    a = -5
+    b = -1
+    x = np.arange(a, b+0.0001,.00001)
+    f = density_exp_distr(lamb, x)
     print(integral_approximation(f, a, b))
 
 
 if __name__ == '__main__':
-    lamb = 1.5
-    a = -5
-    b = -1
-    x =  np.arange(a, b+0.0001,.00001)
-    f = density_exp_distr(lamb, x)
     main()
