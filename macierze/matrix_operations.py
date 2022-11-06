@@ -29,8 +29,12 @@ def math_multiply_matrixs(matrix, matrix2):
     return matrix @ matrix2
 
 
-def main(matrix, matrix2, vector, scalar):
-        if matrix.shape == matrix2.shape:
+def main():
+    matrix = np.array([[2, 3, 4], [5, 6, 7], [1, 2, 3]])
+    matrix2 = np.array([[2, 1, 1], [1, 2, 7], [1, 2, 1]])
+    vector = np.array([2, 3, 5])
+    scalar = 5
+    if matrix.shape == matrix2.shape:
             print(f'1.Suma twojej macierzy \n{matrix}\ni macierzy\n {matrix2}\n daje wynik: \n{sum_matrixs(matrix, matrix2)}. Elementy macierzy są dodawane do siebie element po elemencie.\n')
             print(f'2.Suma twojej macierzy \n{matrix}\ni wektora {vector} daje wynik:\n{sum_matrix_vect(matrix, vector)}. Do każdego wiersza twojej macierzy został dodany wektor{vector}.\n')
             print(f'2.Suma twojej macierzy \n{matrix}\ni skalaru, który jest liczbą {scalar} daje wynik: \n{adding_scalar(matrix, scalar)}. Do każdego elementu twojej macierzy została dodana liczba {scalar}.\n')
@@ -42,8 +46,4 @@ def main(matrix, matrix2, vector, scalar):
 
 
 if __name__ == '__main__':
-    matrix = np.array([[2, 3, 4], [5, 6, 7], [1, 2, 3]])
-    matrix2 = np.array([[2, 1, 1], [1, 2, 7], [1, 2, 1]])
-    vector = np.array([2, 3, 5])
-    scalar = 5
-    main(matrix, matrix2, vector, scalar)
+    main()

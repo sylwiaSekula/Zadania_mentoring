@@ -29,7 +29,10 @@ def skalar_multiplication(vector, b):
                  'wszystkie te liczby dodane do siebie dają iloczyn skalarny:', sum(result),'\n')
 
 
-def main(vector, b, c):
+def main():
+    vector = np.array([1, 3, 5])
+    b = np.array([2, 4, 6])
+    c = 3
     if len(vector) == len(b):
         print(f'Suma twojego wektora {vector} i wektora {b} daje wynik: {sum_vects(vector, b)}. Elementy wektorów są dodawane do siebie element po elemencie.\n')
         print(f'**Suma twojego wektora {vector} i skalaru, który jest liczbą {c} daje wynik: {add_scalar(vector, c)}. Do każdego elementu twojego wektora została dodana liczba {c}.\n')
@@ -44,9 +47,6 @@ def main(vector, b, c):
 
 
 if __name__ == '__main__':
-    vector = np.array([1, 3, 5])
-    b = np.array([2, 4, 6])
-    c = 3
-    main(vector, b, c)
+    main()
 
 
