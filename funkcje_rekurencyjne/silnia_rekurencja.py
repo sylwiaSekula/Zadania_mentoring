@@ -7,11 +7,11 @@ def silnia_reku(n):
 
 
 def main():
+    n = 9
     print(silnia_reku(n))
 
 
 if __name__ == '__main__':
-    n = 9
     main()
 
 

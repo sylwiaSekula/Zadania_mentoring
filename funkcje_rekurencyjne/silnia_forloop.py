@@ -8,9 +8,9 @@ def silnia_for(n):
 
 
 def main():
+    n = 777
     print(silnia_for(n))
 
 
 if __name__ == '__main__':
-    n = 777
     main()
