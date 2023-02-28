@@ -27,39 +27,18 @@ for i in range(50):
     kurtosis_list.append(stats.kurtosis(new_distribution))
 
 
-print('Średnia teoretyczna:', theoretical_mean)
-print('Średnia z próbki 5:', np.mean(uni))
-print('Średnia z próbki 1000:', np.mean(uni2))
-print('Średnia z estymatorów:', np.mean(mean_list))
-print('Efektwyność estymatora:', np.std(mean_list)/np.mean(mean_list)*100)
-print('')
-print('Wariancja teoretyczna:', theoretical_variance)
-print('Wariancja z próbki 5:', np.var(uni))
-print('Wariancja z próbki 1000:', np.var(uni2))
-print('Średnia z estymatorów', np.mean(variance_list))
-print('Efektwyność estymatora:', np.std(variance_list)/np.mean(variance_list)*100)
-print('')
-print('Odchylenie standardowe teoretyczne:', theoretical_standard_deviation)
-print('Odchylenie standardowe z próbki 5:', np.std(uni))
-print('Odchylenie standardowez próbki 1000:', np.std(uni2))
-print('Średnia z estymatorów', np.mean(standard_deviation_list))
-print('Efektwyność estymatora:', np.std(standard_deviation_list)/np.mean(standard_deviation_list)*100)
-print('')
-print('Odchylenie standardowe teoretyczne:', theoretical_standard_deviation)
-print('Odchylenie standardowe z próbki 5:', np.std(uni))
-print('Odchylenie standardowe z próbki 1000:', np.std(uni2))
-print('Średnia z estymatorów', np.mean(standard_deviation_list))
-print('Efektwyność estymatora:', np.std(standard_deviation_list)/np.mean(standard_deviation_list)*100)
-print('')
-print('Skośność teoretyczna:', theoretical_skewness)
-print('Skośność  z próbki 5:', stats.skew(uni))
-print('Skośność  próbki 1000:', stats.skew(uni2))
-print('Średnia z estymatorów', np.mean(skewness_list))
-print('Efektwyność estymatora:', np.std(skewness_list)/np.mean(skewness_list)*100)
-print('')
-print('Kurtoza teoretyczna:', theoretical_kurtosis)
-print('Kurtoza  z próbki 5:', stats.kurtosis(uni))
-print('Kurtoza  próbki 1000:', stats.kurtosis(uni2))
-print('Kurtoza z estymatorów', np.mean(kurtosis_list))
-print('Efektwyność estymatora:', np.std(kurtosis_list)/np.mean(kurtosis_list)*100)
-print('')
+calculations = [theoretical_mean, np.mean(uni), np.mean(uni2), np.mean(mean_list), np.std(mean_list) / np.mean(mean_list) * 100, theoretical_variance,
+                np.var(uni), np.var(uni2), np.mean(variance_list), np.std(variance_list) / np.mean(variance_list) * 100,
+                theoretical_standard_deviation, np.std(uni) , np.std(uni2), np.mean(standard_deviation_list), np.std(standard_deviation_list) / np.mean(standard_deviation_list) * 100,
+                theoretical_skewness, stats.skew(uni), stats.skew(uni2), np.mean(skewness_list), np.std(skewness_list) / np.mean(skewness_list) * 100,
+                theoretical_kurtosis, stats.kurtosis(uni), stats.kurtosis(uni2), np.mean(kurtosis_list), np.std(kurtosis_list) / np.mean(kurtosis_list) * 100]
+descriptions = ['Theoretical mean:','Średnia z próbki 5:', 'Średnia z próbki 1000:', 'Średnia z estymatorów:', 'Efektwyność estymatora:',
+                '\nWariancja teoretyczna:', 'Wariancja z próbki 5:', 'Wariancja z próbki 1000:', 'Średnia z estymatorów', 'Efektwyność estymatora:',
+                '\nOdchylenie standardowe teoretyczne:',  'Odchylenie standardowe z próbki 5:','Odchylenie standardowe z próbki 1000:',
+                'Średnia z estymatorów', 'Efektwyność estymatora:', '\nSkośność teoretyczna:', 'Skośność  z próbki 5:', 'Skośność  próbki 1000:',
+                'Średnia z estymatorów','Efektwyność estymatora:','\nKurtoza teoretyczna:', 'Kurtoza  z próbki 5:','Kurtoza  próbki 1000:', 'Kurtoza z estymatorów',
+                'Efektwyność estymatora:']
+
+
+for description, calculation in zip(descriptions, calculations):
+    print(description, calculation)
